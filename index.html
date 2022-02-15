@@ -5,53 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- add style.css -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-200">
+<body class="bg-slate-300">
     
     <!-- calculator start -->
     
-    <h1 class="title">JavaScript Calculator</h1>
-  
-    <div class="container">
-      <form name="form">
-      <div class="display">
-        <input id="display-result" type="text" placeholder="0" name="displayResult" />
-      </div>
-
-
-        <div id="all-buttons" class="buttons">
-          <div class="row">
-            <input type="button" name="b7" value="7" onclick="calculate(this.value)">
-            <input type="button" name="b8" value="8" onclick="calculate(this.value)">
-            <input type="button" name="b9" value="9" onclick="calculate(this.value)">
-            <input type="button" name="addb" value="+" onclick="calculate(this.value)">
+    <section class="lg:w-96 w-80 mx-auto">
+      <header class="my-7">
+        <h1 class="lg:text-4xl text-3xl font-bold text-center">JavaScript Calculator</h1>
+      </header>
+    
+      <main>
+        <div class="container">
+          <form name="form">
+          <div class="display border-solid border-2 border-sky-700 bg-sky-700">
+            <input id="display-result" type="text" placeholder="0" name="displayResult" />
           </div>
-          
-          <div class="row">
-            <input type="button" name="b4" value="4" onclick="calculate(this.value)">
-            <input type="button" name="b5" value="5" onclick="calculate(this.value)">
-            <input type="button" name="b6" value="6" onclick="calculate(this.value)">
-            <input type="button" name="subb" value="-" onclick="calculate(this.value)">
-          </div>
-          
-          <div class="row">
-            <input type="button" name="b1" value="1" onclick="calculate(this.value)">
-            <input type="button" name="b2" value="2" onclick="calculate(this.value)">
-            <input type="button" name="b3" value="3" onclick="calculate(this.value)">
-            <input type="button" name="mulb" value="*" onclick="calculate(this.value)">
-          </div>
-          
-          <div class="row">
-            <input type="button" name="b0" value="0" onclick="calculate(this.value)">
-            <input type="button" name="potb" value="C" onclick="displayResult.value = null">
-            <input type="button" name="divb" value="/" onclick="calculate(this.value)">
-            <input type="button" class="red" value="=" onclick="displayResult.value = eval(displayResult.value)">
-          </div>
-        </div>  
-      </form>
-    </div>
+    
+    
+            <div id="all-buttons" class="buttons text-center border-solid border-2 border-sky-700 bg-transparent">
+              <div class="grid grid-rows-1 grid-cols-4 mb-4 pt-4">
+                <div>
+                  <input class="hover:bg-sky-700" type="button" name="b7" value="7" onclick="calculate(this.value)">
+                </div>
+                <div>
+                  <input class="hover:bg-sky-700" type="button" name="b8" value="8" onclick="calculate(this.value)">
+                </div>
+                <div>
+                  <input class="hover:bg-sky-700" type="button" name="b9" value="9" onclick="calculate(this.value)">
+                </div>
+                <div>
+                  <input class="hover:bg-sky-700" type="button" name="addb" value="+" onclick="calculate(this.value)">
+                </div>
+              </div>
+              
+              <div class="grid grid-rows-1 grid-cols-4 mb-4">
+                <div>
+                  <input class="hover:bg-sky-700" type="button" name="b4" value="4" onclick="calculate(this.value)">
+                </div>
+                <div>
+                  <input class="hover:bg-sky-700" type="button" name="b5" value="5" onclick="calculate(this.value)">
+                </div>
+                <div>
+                  <input class="hover:bg-sky-700" type="button" name="b6" value="6" onclick="calculate(this.value)">
+                </div>
+                <div>
+                  <input class="hover:bg-sky-700" type="button" name="subb" value="-" onclick="calculate(this.value)">
+                </div>
+              </div>
+              
+              <div class="grid grid-rows-1 grid-cols-4 mb-4">
+                <div>
+                  <input class="hover:bg-sky-700" type="button" name="b1" value="1" onclick="calculate(this.value)">
+                </div>
+                <div>
+                  <input class="hover:bg-sky-700" type="button" name="b2" value="2" onclick="calculate(this.value)">
+                </div>
+                <div>
+                  <input class="hover:bg-sky-700" type="button" name="b3" value="3" onclick="calculate(this.value)">
+                </div>
+                <div>
+                  <input class="hover:bg-sky-700" type="button" name="mulb" value="*" onclick="calculate(this.value)">
+                </div>
+              </div>
+              
+              <div class="grid grid-rows-1 grid-cols-4 mb-4">
+                <div>
+                  <input class="hover:bg-sky-700" type="button" name="b0" value="0" onclick="calculate(this.value)">
+                </div>
+                <div>
+                  <input class="hover:bg-sky-700" type="button" name="potb" value="C" onclick="displayResult.value = null">
+                </div>
+                <div>
+                  <input class="hover:bg-sky-700" type="button" name="divb" value="/" onclick="calculate(this.value)">
+                </div>
+                <div>
+                  <input type="button" class="red" value="=" onclick="displayResult.value = eval(displayResult.value)">
+                </div> 
+              </div>
+            </div>  
+          </form>
+        </div>
+      </main>
+    </section>
     <!-- calculator end -->
 
     <!-- add app.js file -->
